@@ -1,0 +1,51 @@
+---
+layout: post
+title:  小学计算题生成器
+date:   2018-02-07 13:44:54 +0800
+categories: life
+tags: generator
+thumbnail: /images/n7virdvindbmy8e9tq7c.jpg
+---
+<span>
+帮弟弟做的计算题生成器可以生成100内加减法，选择多项算式则是三项，否则是两项。
+<hr>
+<p style="font-size: 16px"><input type="checkbox" id="multinomial" /> 多项算式 <input type="button" id="generate" value="生成" /></p>
+<p style="font-size: 24px" id="result"></p>
+<script>
+    var result = document.getElementById("result");
+    var generate = document.getElementById("generate");
+    var multinomial = document.getElementById("multinomial");
+    generate.onclick = function(element){
+        var temp = 0;
+        var arg_one = Math.round(Math.random() * 100)
+        var operator_one = Math.random() > 0.5 ? '+' : '-'
+        if(operator_one == '-'){
+            arg_two = Math.round(Math.random() * arg_one)
+            temp = arg_one - arg_two;
+        } else {
+            arg_two = Math.round(Math.random() * (100 - arg_one))
+            temp = arg_one + arg_two;
+        }
+        if(multinomial.checked){
+            var operator_two = Math.random() > 0.5 ? '+' : '-'
+            if(operator_two == '-'){
+                arg_three = Math.round(Math.random() * temp)
+                temp = temp - arg_three;
+            } else {
+                arg_three = Math.round(Math.random() * (100 - temp))
+                temp = temp + arg_three;
+            }
+            if(arg_one<10 || arg_two<10 || arg_three<10 || temp == 0){
+                generate.onclick(element)
+                return;
+            }
+            result.innerText = arg_one + operator_one + arg_two + operator_two + arg_three + "=?"
+        } else {
+            if(arg_one<10 || arg_two<10 || temp == 0){
+                generate.onclick(element)
+                return;
+            }
+            result.innerText = arg_one + operator_one + arg_two + "=?"
+        }
+    }
+</script>

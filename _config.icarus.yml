@@ -1,0 +1,116 @@
+version: 4.0.0
+variant: default
+logo: /images/mozzdirpj8yymkcwon3b.png
+head:
+    favicon: /images/mozzdirpj8yymkcwon3b.png
+    open_graph:
+        title: 
+        type: blog
+        url: 
+        image: 
+        site_name: 
+        author: 
+        description: 
+        twitter_card: 
+        twitter_id: 
+        twitter_site: 
+        google_plus: 
+        fb_admins: 
+        fb_app_id: 
+    structured_data:
+        title: 
+        description: 
+        url: 
+        author: 
+        image: 
+    meta:
+        - ''
+    rss: 
+navbar:
+    menu:
+        Home: /
+        Archives: /archives
+        Categories: /categories
+        Tags: /tags
+        About: /about
+    links:
+        Download on GitHub:
+            icon: fab fa-github
+            url: 'https://github.com/xausky'
+article:
+    highlight:
+        theme: atom-one-light
+        clipboard: true
+        fold: unfolded
+    readtime: true
+search:
+    type: insight
+comment:
+    type: valine
+    app_id: nYkTbs2JKnTxzaRdkQkiFOxw-gzGzoHsz
+    app_key: eD7a3qYNOU1G9g8labRWli5B
+share:
+    type: addtoany
+sidebar:
+    left:
+        sticky: true
+    right:
+        sticky: true
+widgets:
+    -
+        position: left
+        type: profile
+        author: xausky
+        author_title: Just For Fun
+        location: 'Shanghai, China'
+        avatar: /images/mozzdirpj8yymkcwon3b.png
+        avatar_rounded: false
+        gravatar: 
+        follow_link: 'https://github.com/xausky'
+        social_links:
+            Github:
+                icon: fab fa-github
+                url: 'https://github.com/xausky'
+            Twitter:
+                icon: fab fa-twitter
+                url: 'https://twitter.com/xausky'
+            Bilibili:
+                icon: fas fa-tv
+                url: 'https://space.bilibili.com/8419077'
+    -
+        position: left
+        type: toc
+    -
+        position: left
+        type: categories
+    -
+        position: right
+        type: recent_posts
+    -
+        position: right
+        type: archives
+    -
+        position: right
+        type: tags
+plugins:
+    animejs: true
+    back_to_top: true
+    baidu_analytics:
+        tracking_id: 
+    busuanzi: false
+    cnzz:
+        id: 
+        web_id: 
+    gallery: true
+    google_analytics:
+        tracking_id: 
+    hotjar:
+        site_id: 
+    katex: false
+    mathjax: false
+    outdated_browser: false
+    progressbar: true
+providers:
+    cdn: jsdelivr
+    fontcdn: google
+    iconcdn: fontawesome
